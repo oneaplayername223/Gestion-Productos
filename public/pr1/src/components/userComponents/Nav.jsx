@@ -9,7 +9,7 @@ function Nav() {
         <Link to='/perfil'>Perfil</Link>
         <Link to='/venta'>Venta</Link>
         <Link to='/agregar'>Agregar Productos</Link>
-         <Link to='/login'>Cerrar Sesion</Link>
+         <Link to='/logout'>Cerrar Sesion</Link>
     </section>
   )
 }

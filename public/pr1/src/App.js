@@ -7,6 +7,8 @@ import AgregarProducto from './routes/userRoutes/AgregarProducto.jsx';
 import IndexUser from './routes/guessRoutes/Index.jsx';
 import Perfil from './routes/userRoutes/Perfil.jsx';
 import Venta from './routes/userRoutes/Venta.jsx';
+import Logout from './components/Logout.jsx';
+
 function App() {
   return (
     <div className="App">
@@ -19,7 +21,7 @@ function App() {
           <Route path='/venta' element={<Venta />} />
 
         <Route path='/agregar' element={<AgregarProducto />} />
-        <Route path='/' element={<IndexUser />} />
+        <Route path='/logout' element={<Logout />} />
 
 
 

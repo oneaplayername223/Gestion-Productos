@@ -17,8 +17,9 @@ userRoutes.get('/imagen/:id', userVerify, verImagenController)
 userRoutes.get('/refresh', userVerify, sessionUpdateController)
 
 userRoutes.post('/logout', (req, res) => {
-  res.clearCookie('token', { httpOnly: true });
-  res.status(200).json({ message: 'Sesión cerrada exitosamente' });
+  res.clearCookie('token', { path: '/' });
+  res.clearCookie('refresh', { path: '/' }); // si estás usando refresh también
+  return res.status(200).json({ message: 'Sesión cerrada exitosamente' });
 });
 
 
