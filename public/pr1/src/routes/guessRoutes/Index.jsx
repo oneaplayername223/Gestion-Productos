@@ -23,9 +23,8 @@ useEffect (() => {
         <h1>Pagina Principal</h1>
 
 <section className='Productos'> 
-    <h2>Productos</h2>
 
-<Card />
+<Card productos={'Productos'}/>
 
 
 </section>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState  } from 'react'
 
-function Card() {
+function Card({ productos }) {
 
 const [data, setData] = useState([])
 
@@ -15,7 +15,7 @@ useEffect(() => {
 
   return (
 <section className='card'>
-
+<h2>{productos}</h2>
 {data.map((i) =>(
     <div key={i.id} className='producto'>
            <img
