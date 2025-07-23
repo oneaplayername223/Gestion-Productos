@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-
+import Nav from '../../components/guessComponents/Nav'
+import Card from '../../components/guessComponents/Card'
 
 function IndexUser() {
 
@@ -16,33 +17,18 @@ useEffect (() => {
 
   return (
     <div className='index'>
+       <Nav />
+
+       
         <h1>Pagina Principal</h1>
-<Link to='/login'>Acceder</Link><br />
+
 <section className='Productos'> 
     <h2>Productos</h2>
-{data.map((item) =>(
-    <div key={item.id} className='producto'>
-                   <h3>Imagen:</h3>
-       <img
-  src={`http://localhost:5000/imagen/${encodeURIComponent(item.imagen)}`}
-  alt={`Imagen de ${item.nombre}`}
-  width={200}
-  onError={(e) => e.target.style.display = 'none'} // oculta si falla
-/>
-        <h2>{item.nombre}</h2>
-        <p>{item.descripcion}</p>
-        <p>{item.cantidad}</p>
-        <p>{item.precio}</p>
 
+<Card />
 
-    </div>
-
-
-))}
 
 </section>
-
-
 
 
 
