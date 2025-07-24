@@ -1,4 +1,4 @@
-import { getService, getProductService } from "../services/guessServices.js"
+import { getService, getProductService, getPreviewService } from "../services/guessServices.js"
 import jwt from "jsonwebtoken"
 export const getController = async (req, res) => {
    try {
@@ -20,6 +20,22 @@ export const getProductController = async(req, res) =>{
         if (data.length === 0 || !data) {
             return res.status(404).json({ message: "Producto no encontrado" })
         }
+        res.json(data)
+        
+    } catch (error) {
+        res.status(500).json({ message: "Error al consultar producto", error: error })
+        
+    }
+}
+
+export const getPreviewController = async (req, res) =>{
+    try {
+        const usuario = req.params.usuario
+        const data = await getPreviewService(usuario)
+        if (data.length === 0 || !data) {
+            return res.status(404).json({ message: "Producto no encontrado" })
+        }
+        
         res.json(data)
         
     } catch (error) {

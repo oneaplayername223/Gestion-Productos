@@ -36,3 +36,14 @@ export const getProductService = async (id) => {
         }
     })
 }
+
+export const getPreviewService = async (id) =>{
+    return new Promise((resolve, reject) =>{
+        const query = 'SELECT usuario, correo, nombre FROM usuarios WHERE id = ?';
+        database.query(query, [id], (req, res) => {
+            if (res.length > 0) {
+                resolve(res);
+            } else { resolve([]); }
+        })
+    })
+}
