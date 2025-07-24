@@ -3,7 +3,7 @@ import database from "./database.js";
 export const getService = async () => {
     return new Promise((resolve, reject) => {
         try {
-            const query = "SELECT nombre, descripcion, precio, imagen FROM productos ";
+            const query = "SELECT id, nombre, descripcion, precio, imagen FROM productos ";
         database.query(query, (req, res) =>{
             if (res.length > 0) {
                 resolve(res);
