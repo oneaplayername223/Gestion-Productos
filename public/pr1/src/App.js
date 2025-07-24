@@ -9,7 +9,6 @@ import Perfil from './routes/userRoutes/Perfil.jsx';
 import Venta from './routes/userRoutes/Venta.jsx';
 import Logout from './components/Logout.jsx';
 import Productos from './routes/guessRoutes/Productos.jsx';
-
 function App() {
   return (
     <div className="App">
