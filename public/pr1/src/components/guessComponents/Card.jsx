@@ -1,5 +1,6 @@
 import React, { useEffect, useState  } from 'react'
 import './Card.css'
+import { Link } from 'react-router-dom'
 function Card({ productos }) {
 
 const [data, setData] = useState([])
@@ -39,8 +40,7 @@ const resultado = data.filter((i) => i.nombre.toLowerCase().includes(busqueda.to
   
        <p>${i.precio}</p>
 
-      <button className='comprarBoton'>Detalles</button>
-
+      <Link className='comprarBoton' to={`/productos/${i.id}`}>Ver mas</Link>
       </div>
   ))}
 
