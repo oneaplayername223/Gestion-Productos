@@ -1,0 +1,68 @@
+.productosMain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagenProductoMain{
+    display: inline-block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 400px;
+    height: auto;
+    margin: 10px;
+    padding: 1px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.productoMainBox{
+    display: inline-block;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 900px;
+    height: auto;
+    margin: 10px;
+    padding: 1px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+.producto:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.01);
+    transition: all 0.3s ease-in-out;
+}
+
+.precio{
+    font-weight: bold;
+    color: rgb(0, 86, 26);
+}
+
+.descripcionMain{
+    margin: 10px;
+    padding: 21px;
+    text-align: start;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.botonComprar{
+    background-color: #1dad00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.botonAgregar{
+    background-color: #fbff00;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
