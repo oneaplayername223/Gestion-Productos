@@ -3,11 +3,12 @@ import { useParams } from 'react-router-dom'
 import Nav from '../../components/guessComponents/Nav';
 import './Productos.css'
 function Productos() {
-const { id } = useParams();    
+const { id } = useParams();  
+const { usuario } = useParams();
 const [data, setData] = useState([])
 
 useEffect(() =>{
-    fetch(`http://localhost:5000/producto/${id}`, {
+    fetch(`http://localhost:5000/producto/${id}/${usuario}`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'},
     }).then(res => res.json()).then(data => setData(data))
