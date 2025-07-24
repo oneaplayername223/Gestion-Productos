@@ -26,10 +26,7 @@ function App() {
 
         <Route path='/' element={<IndexUser />} />
         <Route path='/logout' element={<Logout />} />
-<<<<<<< HEAD
-=======
                 <Route path='/productos/:id' element={<Productos />} />
->>>>>>> invitado
         
 
 
