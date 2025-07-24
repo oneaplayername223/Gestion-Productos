@@ -8,7 +8,7 @@ const { usuario } = useParams();
 const [data, setData] = useState([])
 
 useEffect(() =>{
-    fetch(`http://localhost:5000/producto/${id}/${usuario}`, {
+    fetch(`http://localhost:5000/producto/${id}`, {
         method: 'GET',
         headers: {'Content-Type': 'application/json'},
     }).then(res => res.json()).then(data => setData(data))
