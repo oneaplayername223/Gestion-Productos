@@ -4,7 +4,7 @@ function Nav() {
   return (
     <div>
 <section className='nav'>
-        <Link to='/index'>Inicio</Link>
+        <Link to='/'>Inicio</Link>
         <Link to='/login'>Acceder</Link>
         <Link to='/register'>Registrarse</Link>
     </section>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../../components/guessComponents/Nav'
 import Card from '../../components/guessComponents/Card'
-
+import Footer from '../../components/guessComponents/Footer'
 function IndexUser() {
 
 const [data, setData] = useState([])
@@ -22,14 +22,12 @@ useEffect (() => {
        
         <h1>Pagina Principal</h1>
 
-<section className='Productos'> 
 
-<Card productos={'Productos'}/>
-
-
-</section>
+<Card productos={'Productos Disponibles'}/>
 
 
+
+<Footer />
 
     </div>
   )

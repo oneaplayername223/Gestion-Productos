@@ -21,6 +21,8 @@ function App() {
           <Route path='/venta' element={<Venta />} />
 
         <Route path='/agregar' element={<AgregarProducto />} />
+
+        <Route path='/' element={<IndexUser />} />
         <Route path='/logout' element={<Logout />} />
 
 
