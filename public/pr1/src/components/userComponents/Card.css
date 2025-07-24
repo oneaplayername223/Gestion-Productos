@@ -1,0 +1,16 @@
+.editarBoton{
+    background-color: #FFC107;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.eliminarBoton{
+    background-color: #DC3545;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
