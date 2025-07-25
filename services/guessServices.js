@@ -30,6 +30,7 @@ export const getProductService = async (id) => {
                     resolve(res);
                 } else { resolve([]); }
             })
+            
         } catch (error) {
             res.status (500).json({ message: "Error al obtener el producto" });
             

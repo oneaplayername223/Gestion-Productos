@@ -30,16 +30,16 @@ export const getProductController = async(req, res) =>{
 
 export const getPreviewController = async (req, res) =>{
     try {
-        const usuario = req.params.usuario
-        const data = await getPreviewService(usuario)
+        const id = req.params.id
+        const data = await getPreviewService(id)
         if (data.length === 0 || !data) {
-            return res.status(404).json({ message: "Producto no encontrado" })
+            return res.status(404).json({ message: "Usuario no Disponible" })
         }
         
         res.json(data)
         
     } catch (error) {
-        res.status(500).json({ message: "Error al consultar producto", error: error })
+        res.status(500).json({ message: "Error al consultar Usuario", error: error })
         
     }
 }

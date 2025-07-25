@@ -6,7 +6,7 @@ const guessRoutes = Router()
 
 
 guessRoutes.get('/', getController)
-guessRoutes.get('/producto/:id', getProductController, getPreviewController)
+guessRoutes.get('/producto/:id', getProductController)
 guessRoutes.get('/preview/:id', getPreviewController)
 
 
