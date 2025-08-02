@@ -11,20 +11,21 @@ useEffect (() => {
 }, [id])
 
 
+
   return (
+    <>
     <section className='ProfileCard'>
 
         {data.map ((i) => (
             <div key={i.id} className='productoContainer'>
                       <label className='labels'><b>Usuario:</b></label>
-
-              
                 <p>{i.correo}</p>
                 <p>{i.usuario}</p>
                 <Link to={`/perfil/${i.id}`}><button className='botonPerfil'>Ver Perfil</button></Link>              
             </div>
         ))}
     </section>
+    </>
   )
 }
 

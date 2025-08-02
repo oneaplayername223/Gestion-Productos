@@ -46,7 +46,7 @@ export const getPreviewService = async (id) =>{
             if (res.length > 0) {
 
                 try {
-                    const query2 = 'SELECT usuario, correo, nombre FROM usuarios WHERE id = ?';
+                    const query2 = 'SELECT id, usuario, correo, nombre FROM usuarios WHERE id = ?';
                     database.query(query2, [res[0].id_cuenta], (req, res) => {
                         if (res.length > 0) {
                             resolve(res);
@@ -67,7 +67,7 @@ export const getPreviewService = async (id) =>{
 export const getProfileService = (id) =>{
 try {
     return new Promise((resolve, reject) =>{
-        const query = 'SELECT * FROM usuarios WHERE id = ?';
+        const query = 'SELECT nombre, correo, usuario FROM usuarios WHERE id = ?';
         database.query(query, [id], (req, res) =>{
             if (res.length == 0){ return resolve(['hola'])}
             else{ return resolve(res)}
