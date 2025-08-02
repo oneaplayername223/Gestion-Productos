@@ -9,6 +9,7 @@ import Perfil from './routes/userRoutes/Perfil.jsx';
 import Venta from './routes/userRoutes/Venta.jsx';
 import Logout from './components/Logout.jsx';
 import Productos from './routes/guessRoutes/Productos.jsx';
+import UserCard from './components/guessComponents/UserCard.jsx';
 function App() {
   return (
     <div className="App">
@@ -24,7 +25,12 @@ function App() {
 
         <Route path='/' element={<IndexUser />} />
         <Route path='/logout' element={<Logout />} />
-                <Route path='/productos/:id' element={<Productos />} />
+        <Route path='/productos/:id' element={<Productos />} />
+        <Route path='/perfil/:id' element={<UserCard />} />
+        
+        
+        
+
         
 
 

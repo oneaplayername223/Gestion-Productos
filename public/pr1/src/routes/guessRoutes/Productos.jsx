@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Nav from '../../components/guessComponents/Nav';
+import UserCard from '../../components/guessComponents/UserCard';
 import './Productos.css'
 function Productos() {
 const { id } = useParams();  
@@ -13,7 +14,7 @@ useEffect(() =>{
         headers: {'Content-Type': 'application/json'},
     }).then(res => res.json()).then(data => setData(data))
     console.log(data)
-})
+}, [])
 
   return (
 
@@ -30,10 +31,10 @@ useEffect(() =>{
         <p className='precio'>${item.precio}</p>
        <button className='botonComprar'>Comprar</button>
        <button className='botonAgregar'>Agregar al carrito</button>
-
         <div className='descripcionMain'>
+          <UserCard id={item.id} />
         <label><b>Descripcion:</b></label>
-            <p>{item.descripcion}</p>
+            <p >{item.descripcion}</p>
             </div>
 
     </div>

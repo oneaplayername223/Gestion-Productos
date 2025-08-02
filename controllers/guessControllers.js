@@ -1,5 +1,7 @@
-import { getService, getProductService, getPreviewService } from "../services/guessServices.js"
+import { reject } from "bcrypt/promises.js"
+import { getService, getProductService, getPreviewService, getProfileService } from "../services/guessServices.js"
 import jwt from "jsonwebtoken"
+import database from "../services/database.js"
 export const getController = async (req, res) => {
    try {
      const data = await getService()
@@ -33,7 +35,7 @@ export const getPreviewController = async (req, res) =>{
         const id = req.params.id
         const data = await getPreviewService(id)
         if (data.length === 0 || !data) {
-            return res.status(404).json({ message: "Usuario no Disponible" })
+            return console.log('no existe')
         }
         
         res.json(data)
@@ -42,4 +44,24 @@ export const getPreviewController = async (req, res) =>{
         res.status(500).json({ message: "Error al consultar Usuario", error: error })
         
     }
+}
+
+export const getProfileController = async(req, res) => {
+        const id = req.params.id
+try {
+const data = await getProfileService(id)
+if (data.length >= 1){
+    return res.json(data)
+}
+else{
+                res.status(500).json({ message: "Error al consultar Usuario", error: error })
+
+}
+    
+} catch (error) {
+            res.status(500).json({ message: "Error al consultar Usuario", error: error })
+
+    
+}
+
 }

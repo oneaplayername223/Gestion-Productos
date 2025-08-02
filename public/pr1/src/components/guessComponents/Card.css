@@ -1,3 +1,5 @@
+
+
 .producto{
     display: inline-block;
     aspect-ratio: 1/1;
@@ -70,7 +72,7 @@
       
         
     }
-    .imagenProducto{
+    .imagenProducto .imagenProductoMain{
         width: 300px;
     }
     *{
@@ -86,7 +88,22 @@
     }
     section{
         overflow-x: hidden;
+        margin: 0px 0px;
+        padding: 0px 0px;
 
     }
+    .ProfileCard{
+        overflow-x: hidden;
+        margin: 10px 0px;
+        padding: 0px 0px;
+    }
+    button{
+        width: 100px;
+        height: auto;
+        margin: 0px 0px;
+        padding: 0px 0px;
+    }
+ 
     
 }
+

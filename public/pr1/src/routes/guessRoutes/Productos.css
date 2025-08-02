@@ -66,3 +66,12 @@
     margin: 5px;
     cursor: pointer;
 }
+
+
+.botonPerfil{
+    background-color: #FFC107;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
