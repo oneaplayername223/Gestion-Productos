@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import {useParams, Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import './Comprar.css'
 function Comprar() {
 
 const {id} = useParams()
-const {handleSubmit, register, reset} = useForm()
+const {handleSubmit, register, reset, formState: errors} = useForm()
 const [data, setData] =useState([])
+const [buy, setbuy] =useState(false)
 const onSubmit = (data) => {
     console.log(data)
     alert('Producto Procesado Exitosamente')
+    setbuy(true)
     reset()
 }
 
@@ -18,7 +21,6 @@ useEffect(() =>{
         headers: {'content-Type': 'application/json'},
 
     }).then(res => res.json()).then(data => setData(data))
-
 })
 
 
@@ -43,32 +45,45 @@ useEffect(() =>{
 
 </section>
 
-
+{!buy &&
 <section className='formPagoSection'>
-<form className='formPago' onSubmit={handleSubmit(onSubmit)}>
+    <form className='formPago' onSubmit={handleSubmit(onSubmit)}>
 
        <section className='metodoPagoSection'>
        <h2> Seleccionar Metodo de pago</h2>
         <select className='seleccionMetodo' {...register('tipo', {required: true})}>
             <option className='visa' value={1}>Visa</option>
             <option className='paypal'>PayPal</option>
-            <option className='apple'>Apple Pay</option>
-            <option className='google'>Google Pay</option>
+            <option className='mastercard'>MasterCard</option>
+
+     
         </select>
 
         </section>
 
 
-<label> Nombre de la tarjeta: </label>
-<input type='text' placeholder='Ingresa el nombre' {...register('nombre', {required: true})} />
-<label> Numero: </label>
-<input type='number' placeholder='Ingresa el numero de tarjeta' {...register('numero', {required: true})}/>
-<label> CVV: </label>
-<input type='number' placeholder='Ingresa el cvv' {...register('cvv', {required: true})}/>
-<br />
-<input type='submit' className='procesarCompraBoton' value='Procesar Compra' />
-</form>
+    <label> Nombre de la tarjeta: </label>
+    <input type='text' placeholder='Ingresa el nombre' {...register('nombre', {required: true, minLength: 9, maxLength: 20})} />
+    {errors.nombre && <p>Campo invalido</p>}
+    <label> Numero: </label>
+    <input type='number' placeholder='Ingresa el numero de tarjeta' {...register('numero', {required: true})}/>
+    <label> CVV: </label>
+    <input type='number' placeholder='Ingresa el cvv' {...register('cvv', {required: true, minLength: 3, maxLength: 3})}/>
+        {errors.cvv && <p>Campo invalido</p>}
+
+    <br />
+    <input type='submit' className='procesarCompraBoton' value='Procesar Compra' />
+    </form>
 </section>
+}
+
+{buy &&<>
+
+<h1 className='buyMessage'>Producto comprado Exitosamente</h1>
+</>
+
+}
+
 <Link to={`/productos/${id}`}>Volver</Link>
         
     </div>

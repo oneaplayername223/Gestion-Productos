@@ -37,7 +37,6 @@ useEffect(() =>{
        <h2>{item.nombre}</h2>
         <p className='precio'>${item.precio}</p>
        <Link to={`/comprar/${id}`} className='botonComprar'>Comprar</Link>
-       <button className='botonAgregar'>Agregar al carrito</button>
         <div className='descripcionMain'>
           <UserCard id={item.id} />
         <label><b>Descripcion:</b></label>

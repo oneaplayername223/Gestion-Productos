@@ -41,7 +41,7 @@ const onSubmit = async (formDataFromHook) => {
     const data = await res.json();
     setRefresh(true);
     setTimeout(() => setRefresh(false), 3000);
-    //reset();
+    reset();
   } catch (err) {
     console.error('Error al agregar producto', err);
   }
