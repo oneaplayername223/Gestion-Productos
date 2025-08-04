@@ -5,7 +5,7 @@ export const registerService = (nombre, correo, usuario, hash) => {
         return new Promise((resolve, reject) =>{
             const query = "INSERT INTO usuarios (nombre, correo, usuario, clave) VALUES (?, ?, ?, ?)";
             database.query(query, [nombre, correo, usuario, hash], (errors, results) =>{
-                if(errors){resolve(errors)}
+                if(errors){reject(errors)}
                 else{
                     return resolve(results)
                 }

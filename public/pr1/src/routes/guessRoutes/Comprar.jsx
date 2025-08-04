@@ -59,11 +59,11 @@ useEffect(() =>{
         </section>
 
 
-<label>Nombre de la tarjeta: </label>
+<label> Nombre de la tarjeta: </label>
 <input type='text' placeholder='Ingresa el nombre' {...register('nombre', {required: true})} />
-<label>Numero: </label>
+<label> Numero: </label>
 <input type='number' placeholder='Ingresa el numero de tarjeta' {...register('numero', {required: true})}/>
-<label>CVV: </label>
+<label> CVV: </label>
 <input type='number' placeholder='Ingresa el cvv' {...register('cvv', {required: true})}/>
 <br />
 <input type='submit' className='procesarCompraBoton' value='Procesar Compra' />

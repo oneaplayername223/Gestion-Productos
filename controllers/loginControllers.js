@@ -29,10 +29,23 @@ export const loginController = async(req, res) =>{
     if(!usuario || !clave){
         return res.status(400).json({message: 'faltan campos'})
     }
+    if (usuario == undefined || clave == undefined){
+       return console.log('campos indefinidos')
+    }
 
     const data = await loginService(usuario, clave)
+    if (!data){
+    return res.status(400).json({ autenticado: false, message: 'Usuario no Encontrado' });
+
+    }
 
     const results = data[0]
+
+if (!results){
+    return res.status(400).json({ autenticado: false, message: 'Usuario no Encontrado' });
+
+}
+
     const compare = bcrypt.compareSync(clave, results.clave)
     if (compare){
                 const token = jwt.sign({id: results.id}, 'clave-secreta', {expiresIn: '1h'})
@@ -43,7 +56,7 @@ export const loginController = async(req, res) =>{
                 res.status(200).json({ autenticado: true, message: 'logueado correctamente' });
 
     } else {
-        return console.log('no coincide')
+               return res.status(400).json({ autenticado: false, message: 'Credenciales incorrectas' });
         }
         
     } catch (error) {

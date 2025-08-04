@@ -81,7 +81,6 @@ const handleEditSubmit = (data) => {
 
 
 
-const resultadoStock = data.filter((item) => item.cantidad < 5 || item.cantidad === 0)
   return (
 
     <div className='index'>

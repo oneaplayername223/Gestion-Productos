@@ -6,7 +6,6 @@ function Nav() {
 <section className='nav'>
         <Link to='/'>Inicio</Link>
         <Link to='/login'>Acceder</Link>
-        <Link to='/register'>Registrarse</Link>
     </section>
 
     </div>
