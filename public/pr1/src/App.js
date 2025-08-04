@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
 import Login from './routes/loginRoutes/Login.jsx';
 import Register from './routes/loginRoutes/Register.jsx';
 import Index from './routes/userRoutes/Index.jsx';
@@ -11,6 +11,7 @@ import Logout from './components/Logout.jsx';
 import Productos from './routes/guessRoutes/Productos.jsx';
 import UserCard from './components/guessComponents/UserCard.jsx';
 import PerfilUser from './routes/guessRoutes/PerfilUser.jsx';
+import Comprar from './routes/guessRoutes/Comprar.jsx';
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,11 @@ function App() {
         <Route path='/logout' element={<Logout />} />
         <Route path='/productos/:id' element={<Productos />} />
         <Route path='/perfil/:id' element={<PerfilUser />} />
+        <Route path='/comprar/:id' element={<Comprar />} />
+        <Route path='/*' element={<h1>Pagina no encontrada<br /> <Link to='/'>Volver</Link>
+
+          
+        </h1>} />
         
         
         

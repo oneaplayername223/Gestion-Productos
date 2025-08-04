@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import Nav from '../../components/guessComponents/Nav'
 function PerfilUser() {
 
 const [data, setData] = useState([])
@@ -16,7 +17,7 @@ useEffect(() =>{
 
   return (
     <div className="perfilUser">
-
+<Nav />
 {data.map((i) => 
 <div>
   <section className='personal'>

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import Nav from '../../components/guessComponents/Nav';
 import UserCard from '../../components/guessComponents/UserCard';
 import './Productos.css'
 function Productos() {
 const { id } = useParams();  
-const { usuario } = useParams();
 const [data, setData] = useState([])
+const navigate = useNavigate()
+
+if (!id){
+navigate('/')
+}
 
 useEffect(() =>{
     fetch(`http://localhost:5000/producto/${id}`, {
@@ -15,6 +19,9 @@ useEffect(() =>{
     }).then(res => res.json()).then(data => setData(data))
     console.log(data)
 }, [])
+
+
+
 
   return (
 
@@ -29,7 +36,7 @@ useEffect(() =>{
          <img className='imagenProductoMain' src={`http://localhost:5000/imagen/${encodeURIComponent(item.imagen)}`} alt="" />
        <h2>{item.nombre}</h2>
         <p className='precio'>${item.precio}</p>
-       <button className='botonComprar'>Comprar</button>
+       <Link to={`/comprar/${id}`} className='botonComprar'>Comprar</Link>
        <button className='botonAgregar'>Agregar al carrito</button>
         <div className='descripcionMain'>
           <UserCard id={item.id} />
