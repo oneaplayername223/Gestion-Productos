@@ -34,11 +34,7 @@ export const loginController = async(req, res) =>{
     }
 
     const data = await loginService(usuario, clave)
-    if (!data){
-    return res.status(400).json({ autenticado: false, message: 'Usuario no Encontrado' });
-
-    }
-
+ 
     const results = data[0]
 
 if (!results){
