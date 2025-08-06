@@ -26,7 +26,7 @@
       <li>🔐 Autenticación segura con <code>JWT</code> (access</li>
       <li>🔄 Edición de productos en tiempo real via SSE/AJAX</li>
       <li>📸 Carga y visualización eficiente de imágenes con <code>Multer</code></li>
-      <li>📊 Panel de ventas con cálculo automático de stock</li>
+      <li>📊 Panel de ventas con alerta de stock bajo</li>
       <li>⚙️ Backend organizado en controladores, servicios y middlewares</li>
     </ul>
   </div>
