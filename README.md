@@ -23,7 +23,7 @@
   <div class="section">
     <h2>✨ Características Principales</h2>
     <ul>
-      <li>🔐 Autenticación segura con <code>JWT</code> (access</li>
+      <li>🔐 Autenticación segura con <code>JWT</code> (access)</li>
       <li>🔄 Edición de productos en tiempo real via SSE/AJAX</li>
       <li>📸 Carga y visualización eficiente de imágenes con <code>Multer</code></li>
       <li>📊 Panel de ventas con alerta de stock bajo</li>
