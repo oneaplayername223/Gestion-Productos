@@ -23,10 +23,10 @@
   <div class="section">
     <h2>✨ Características Principales</h2>
     <ul>
-      <li>🔐 Autenticación segura con <code>JWT</code> (access + refresh)</li>
+      <li>🔐 Autenticación segura con <code>JWT</code> (access</li>
       <li>🔄 Edición de productos en tiempo real via SSE/AJAX</li>
       <li>📸 Carga y visualización eficiente de imágenes con <code>Multer</code></li>
-      <li>📊 Panel de ventas con cálculo automático de stock y totales</li>
+      <li>📊 Panel de ventas con cálculo automático de stock</li>
       <li>⚙️ Backend organizado en controladores, servicios y middlewares</li>
     </ul>
   </div>
@@ -39,7 +39,6 @@
  ┣ 📂routes/
  ┣ 📂services/
  ┣ 📂middlewares/
- ┣ 📂imagen/
  ┗ 📜server.js
 
 📦 frontend/
