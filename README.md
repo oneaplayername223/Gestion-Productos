@@ -70,6 +70,7 @@ npm start
     <p><strong>Elian J. Marquez</strong> – Fullstack Developer especializado en arquitectura modular y flujo asincrónico robusto.</p>
     <p>🔗 <a href="https://github.com/oneaplayername223" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/elian-josue-marquez-baez-671298351" target="_blank">LinkedIn</a></p>
   </div>
+📄 Available in: [Español](README.md) | [English](README-en.md)
 
 </body>
 </html>
