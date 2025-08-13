@@ -1,7 +1,56 @@
-<!DOCTYPE html>
+# 🛒 Inventory and Sales Management System
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+<div>
+  <span class="badge">Node.js + Express</span>
+  <span class="badge">React Frontend</span>
+  <span class="badge">JWT Authentication</span>
+  <span class="badge">In Development</span>
+</div>
+
+## 🧾 Project Overview
+Full-stack web application for managing products, users, sales, and inventory in real time.  
+It implements a **modular architecture** with optimized asynchronous flows for stable deployment in production environments.
+
+## ✨ Key Features
+- 🔐 Secure authentication with **JWT** (access tokens)
+- 🔄 Real-time product editing via **SSE/AJAX**
+- 📸 Efficient image upload and rendering with **Multer**
+- 📊 Sales dashboard with low-stock alerts
+- ⚙️ Backend structured into controllers, services, and middlewares
+
+## 📁 Project Structure
+📦 backend/
+┣ 📂controllers/
+┣ 📂routes/
+┣ 📂services/
+┣ 📂middlewares/
+┗ 📜server.js
+
+📦 frontend/
+┣ 📂components/
+┣ 📂routes/
+┗ 📜App.js
+
+
+## ⚙️ Installation
+
+git clone https://github.com/oneaplayername223/Gestion-Productos
+
+# Backend
+cd backend
+npm install
+node server.js
+
+# Frontend
+cd ../frontend
+npm install
+npm start
+
+
+
+
 
   
 </head>
